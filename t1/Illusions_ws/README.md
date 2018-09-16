@@ -87,17 +87,26 @@ Es una ilusion de deriva periférica; cualquier parte de la figura que esté en 
 
 #### Cambio de color por contraste
 Cambio de color debido al cambio de contraste, la banda del centro es de un tono gris constante, pero se ve afectada por el contraste con el fondo, pareciendo que tiene un cambio de color que no existe.
+<<<<<<< HEAD
 
 Pase el mouse sobre la imagen para quitar la gradación del fondo.
 ##### Referencia
 - http://www.michaelbach.de/ot/lum-inducedGrating/index.html
 
+=======
+
+Pase el mouse sobre la imagen para quitar la gradación del fondo.
+##### Referencia
+- http://www.michaelbach.de/ot/lum-inducedGrating/index.html
+
+>>>>>>> c735d2c63a1981f25702f0085f9ec50aa2498298
 
 #### Neon
 ##### Referencia
 - http://www.michaelbach.de/ot/col-neon/index.html
 - https://www.illusionsindex.org/i/neon-color-spreading
 
+<<<<<<< HEAD
 #### Profundización
 Fue muy interesante hacer la investigación completa, encontre muchas que me sorprendieron pero así mismo eran de dificil implementación.
 
@@ -105,6 +114,8 @@ Las ilusiones perceptivas me parecieron muy interesantes, y mas viendo como no t
 
 No llegue a implemetar nada en 3D, por lo tanto es un tema pendiente en el que me gustaria profundizar, al igual que en manejo de color y profundidad.
 
+=======
+>>>>>>> c735d2c63a1981f25702f0085f9ec50aa2498298
 ## Entrega
 * Modo de entrega: clonar este repo y subirlo a `https://github.com/username/cv/t1`.
 * Plazo: 16/9/18 a las 24h.
