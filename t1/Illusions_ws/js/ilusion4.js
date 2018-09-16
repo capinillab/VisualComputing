@@ -6,6 +6,7 @@
 */
 
 var sketchOrbison = function(insOrbison) {
+  "use strict";
 	var triang = true;
 
 	insOrbison.setup = function(){
@@ -48,6 +49,7 @@ var sketchOrbison = function(insOrbison) {
 	  }
 	};
 
+	// Interacción
 	insOrbison.mouseMoved = function() {
 	  if (insOrbison.dist(insOrbison.mouseX,insOrbison.mouseY,insOrbison.width/2,insOrbison.height/2) < insOrbison.width/2){
 	    triang = false;

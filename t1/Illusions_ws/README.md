@@ -19,20 +19,20 @@ Complete la tabla:
 
 ## Discusión
 
-1. Complete la la tabla
+### 1. Complete la la tabla
 
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
-| Caballo |  Ambigua  |[Referencia 1](http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html)<br>[Referencia 2](http://www.michaelbach.de/ot/sze-silhouette/index.html) | Clik para ver lineas de referencia     |  No tiene                   |
-| Distorción de Caras | Rostros <br> Movimiento | [Referencia](http://mbthompson.com/research/) | Click para ver linea de referencia | No tiene  |
-| Waterfall | Movimiento | [Referencia 1](http://www.michaelbach.de/ot/mot-adapt/index.html)<br>[Referencia 2](https://www.illusionsindex.org/ir/waterfall-illusion) | Click para ver imagen de fondo | No tiene |
-| Orbison | Geometrica | [Referencia](https://www.illusionsindex.org/ir/orbison-illusion) | Pasar el mouse sobre la imagen para quitar las lineas | No tiene |
-|         |           |            |                                    |                             |
-|         |           |            |                                    |                             |
+| Caballo | Ambigua | [Referencia 1](http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html)<br>[Referencia 2](http://www.michaelbach.de/ot/sze-silhouette/index.html) | Clik para ver lineas de referencia de dirección | No tiene |
+| Distorción de Caras | Rostros <br> Movimiento | [Referencia](http://mbthompson.com/research/) | Click para ver linea de referencia altura ojos | No tiene |
+| Waterfall | Movimiento | [Referencia 1](http://www.michaelbach.de/ot/mot-adapt/index.html)<br>[Referencia 2](https://www.illusionsindex.org/ir/waterfall-illusion) | Click para ver imagen de fondo (en reposo) | No tiene |
+| Orbison | Geometrica | [Referencia](https://www.illusionsindex.org/ir/orbison-illusion) | Pasar el mouse sobre la imagen para quitar las lineas de distorsión | No tiene |
+| Snakes | Movimiento Ilusorio | [Referencia 1](http://www.michaelbach.de/ot/mot-snakesLum/index.html)<br>[Referencia 2](https://www.illusionsindex.org/i/rotating-snakes) | No tiene | No tiene |
+| Contraste | Fisiologica<br>Cambio de color | [Referencia](http://www.michaelbach.de/ot/lum-inducedGrating/index.html) | Pasar el mouse sobre la imágen para ocultar la gradación del fondo | [Gradación](https://processing.org/examples/lineargradient.html) |
 
 Las Ilusiones se pueden ver en la página del trabajo: https://capinillab.github.io/cv/t1/Illusions_ws/
 
-2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
+### 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
 
 #### Ilusión Caballo:
 En esta imagen se ve el caballo mirando hacia adelante y hacia atras, debido a que no hay puntos de referencia, que nos ayuden a determinar la dirección.
@@ -72,13 +72,32 @@ Esto a menudo se explica en términos de "fatiga" de la clase de neuronas que co
 El cuadro rojo aparece distorsionado, aunque no lo este, al igual que el rectángulo que contiene la imagen, aunque tampoco lo esté.
 
 Una de las explicaciones a este fenomeno es que nuestros sistemas perceptivos tienen tendencia a "expandir" ángulos agudos, en este caso las líneas de fondo azul que se cruzan con las líneas rojas del cuadro hacen que el sistema visual mejore el contraste de orientación entre las líneas roja y azul, para "expandir" los ángulos agudos en el punto de intersección entre líneas azules y rojas.
-  
+
 Pase el mouse sobre la imagen para que desaparezcan las lineas azules.
-##### referencia
+##### Referencia
 - https://www.illusionsindex.org/ir/orbison-illusion
 
+#### Serpientes Rotatorias
+Evoca una experiencia perceptual de movimiento ilusorio.
+
+Es una ilusion de deriva periférica; cualquier parte de la figura que esté en el centro de nuestro campo visual parece inmóvil (como de hecho lo es), mientras que las partes vistas en nuestra visión periférica parecen moverse.
+##### Referencias
+- http://www.michaelbach.de/ot/mot-snakesLum/index.html
+- https://www.illusionsindex.org/i/rotating-snakes
+
+#### Cambio de color por contraste
+Cambio de color debido al cambio de contraste, la banda del centro es de un tono gris constante, pero se ve afectada por el contraste con el fondo, pareciendo que tiene un cambio de color que no existe.
+
+Pase el mouse sobre la imagen para quitar la gradación del fondo.
+##### Referencia
+- http://www.michaelbach.de/ot/lum-inducedGrating/index.html
+
+
+#### Neon
+##### Referencia
+- http://www.michaelbach.de/ot/col-neon/index.html
+- https://www.illusionsindex.org/i/neon-color-spreading
 
 ## Entrega
-
 * Modo de entrega: clonar este repo y subirlo a `https://github.com/username/cv/t1`.
 * Plazo: 16/9/18 a las 24h.
