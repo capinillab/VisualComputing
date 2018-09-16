@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ilusiones Ópticas</title>
+  <title>Ilusiones Visuales</title>
 
   <script src="js/p5.min.js"></script>
-  <script src="js/ilusiones.js"></script>
+  <script src="js/ilusion1.js"></script>
+  <script src="js/ilusion2.js"></script>
+  <script src="js/ilusion3.js"></script>
 </head>
 <body>
   <h2>Ilusiones Ópticas</h2>
-  <h3>Imagen Ambigua</h3>
-    <div id="ambHorse"></div>
+  <h3>Imagen Ambigua Caballo</h3>
+    <div id="horse"></div>
 
-    <p>¿Hacia donde mira el caballo? <br>
-      En esta imagen se ve el caballo mirando hacia adelante y hacia atras, debido a que no hay puntos de referencia.</p>
+		<h4>Explicacion</h4>
+    <p>En esta imagen se ve el caballo mirando hacia adelante y hacia atras,
+			debido a que no hay puntos de referencia, que nos ayuden a determinar la dirección.</p>
+    <p>Si se da click sobre la imágen se mostraran las lineas de referencia,
+      en forma ciclica, con lo cual la imágen dejara de ser ambigua. </p>
 
-  <h3>Imagen Ambigua</h3>
-    <div id="ambHor"></div>
-    <p>.</p>
+    <ol>
+      <li>Linea de referencia para que el caballo mire hacia el frente.</li>
+      <li>Linea de referencia para que el caballo mire hacia atras.</li>
+      <li>Imagen sin referencias.</li>
+    </ol>
 
-  <h3>Imagen Ambigua</h3>
-    <div id="ambHorse"></div>
-    <p>.</p>
+  <h3>Distorción de Caras</h3>
+    <div id="face"></div>
+
+		<h4>Explicacion</h4>
+		<h5>Esta ilusión no se ha posdido completar en P5.js, por facor revisarla en el repo.</h5>
+    <p>Se debe enfocar la mirada en el punto de la cruz central,
+		  con la vista periferica se observa que los rostros se ven monstruosos.<p>
+		<p>Al alinear las caras de los ojos y presentarlos rápidamente, es mucho más
+			fácil compararlos, por lo que las diferencias entre las caras son más extremas.
+			Si alguien tiene una mandíbula grande, se ve casi como un ogro. Si tienen
+			una frente especialmente grande, parece particularmente bulbosa. </p>
+		<p>Al hacer click se mostrara la linea de referencia de la altura de los ojos.</p>
+
+	<h3>Neon</h3>
+		<div id="neon"></div>
+		<p>.</p>
+
 </body>
 </html>

@@ -23,14 +23,41 @@ Complete la tabla:
 
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
-| Caballo |  Ambigua  |            |  No Tiene                          |  No Tiene                   |
-|         |           |            |                                    |                             |
+| Caballo |  Ambigua  |[Referencia 1](http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html)<br> [Referencia 2](http://www.michaelbach.de/ot/sze-silhouette/index.html) | Clik para ver lineas de referencia     |  No Tiene                   |
+| Distorción de Caras | Rostros <br> Movimiento | [Referencia](http://mbthompson.com/research/) | Click para ver linea de referencia | No Tiene  |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 
+Las Ilusiones se pueden ver en la página del trabajo: https://capinillab.github.io/cv/t1/Illusions_ws/
+
 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
+
+#### Ilusión Caballo:
+En esta imagen se ve el caballo mirando hacia adelante y hacia atras, debido a que no hay puntos de referencia, que nos ayuden a determinar la dirección.
+
+Al hacer click sobre la imágen, se mostraran las lineas de referencia, en forma ciclica, con lo cual la imágen dejara de ser ambigua.
+  1. Linea de referencia para que el caballo mire hacia el frente.
+  2. Linea de referencia para que el caballo mire hacia atras.
+  3. Imagen sin referencias.
+
+##### Referencias:
+- http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html
+- http://www.michaelbach.de/ot/sze-silhouette/index.html
+
+#### Distorción de Caras
+Se debe enfocar la mirada en el punto de la cruz central, con la vista periferica se observa que los rostros se ven monstruosos.
+
+Al alinear las caras de los ojos y presentarlos rápidamente, es mucho más fácil compararlos, por lo que las diferencias entre las caras son más extremas. Si alguien tiene una mandíbula grande, se ve casi como un ogro. Si tienen una frente especialmente grande, parece particularmente bulbosa.
+
+Al hacer click sobre al imagen, se mostrara la linea de referencia de la altura de los ojos.
+##### Referencias
+- http://mbthompson.com/research/
+
+####
+##### Referencias
+
 
 ## Entrega
 

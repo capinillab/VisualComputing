@@ -1,4 +1,12 @@
-//Figura Ambigua
+// Figura Ambigua Caballo
+/* En esta imagen se ve el caballo mirando hacia adelante y hacia atras, debido a que no hay puntos de referencia.
+  Si se da click sobre la imágen se mostraran las lineas de referencia, en forma ciclica, con lo cual la imágen dejara de ser ambigûa.
+  1 Linea de referencia para que el caballo mire hacia el frente.
+  2 Linea de referencia para que el caballo mire hacia atras.
+  3 Imagen sin referencias.
+*/
+
+int refLines;
 
 void setup() {
   size(400, 440, P2D);
@@ -7,11 +15,52 @@ void setup() {
 void draw() {
   background(255);
   float v=width/100;
+  
   horse(v);
+  
+  switch(refLines){
+    case 1:
+      front(v);
+      break;
+    case 2:
+      back(v);
+      break;
+    default:
+      redraw();
+  }
+}
+
+void front(float v){
+  smooth();
+  noFill();
+  stroke(255);
+  strokeWeight(v*0.7);
+  beginShape();
+  curveVertex(33*v, 60*v);
+  curveVertex(33*v, 60*v);
+  curveVertex(41*v, 53*v);
+  curveVertex(43*v, 45*v);
+  curveVertex(43*v, 45*v);
+  endShape();
+}
+
+void back(float v){
+  smooth();
+  noFill();
+  stroke(255);
+  strokeWeight(v*0.7);
+  beginShape();
+  curveVertex(34*v, 61*v);
+  curveVertex(34*v, 61*v);
+  curveVertex(31*v, 53*v);
+  curveVertex(29*v, 45*v);
+  curveVertex(29*v, 45*v);
+  endShape();
 }
 
 void horse(float v){
   smooth();
+  noStroke();
   fill(0);
   beginShape();
   //espalda
@@ -94,4 +143,13 @@ void horse(float v){
   curveVertex(50*v, 110*v);
   vertex(100*v, 110*v);
   endShape(CLOSE);
+}
+
+// Interacción
+void mouseClicked() {
+  if (refLines == 2) {
+    refLines = 0;
+  } else {
+    refLines += 1;
+  }
 }
