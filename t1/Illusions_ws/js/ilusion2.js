@@ -15,7 +15,7 @@ var sketchFace = function(insFace) {
 
   insFace.setup = function() {
     insFace.createCanvas(852, 406);
-    insFace.frameRate(500);
+    insFace.frameRate(10);
 
     // faces = new StringList();
 

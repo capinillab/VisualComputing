@@ -1,7 +1,7 @@
 // Rostros monstruosos
 
 void setup() {
-  size(854, 480, P2D);
+  size(400, 400, P2D);
 }
 
 void draw() {

@@ -26,7 +26,7 @@ Complete la tabla:
 | Caballo |  Ambigua  |[Referencia 1](http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html)<br>[Referencia 2](http://www.michaelbach.de/ot/sze-silhouette/index.html) | Clik para ver lineas de referencia     |  No tiene                   |
 | Distorción de Caras | Rostros <br> Movimiento | [Referencia](http://mbthompson.com/research/) | Click para ver linea de referencia | No tiene  |
 | Waterfall | Movimiento | [Referencia 1](http://www.michaelbach.de/ot/mot-adapt/index.html)<br>[Referencia 2](https://www.illusionsindex.org/ir/waterfall-illusion) | Click para ver imagen de fondo | No tiene |
-|         |           |            |                                    |                             |
+| Orbison | Geometrica | [Referencia](https://www.illusionsindex.org/ir/orbison-illusion) | Pasar el mouse sobre la imagen para quitar las lineas | No tiene |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 
@@ -46,13 +46,13 @@ Al hacer click sobre la imágen, se mostraran las lineas de referencia, en forma
 - http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html
 - http://www.michaelbach.de/ot/sze-silhouette/index.html
 
-#### Distorción de Caras
+#### Distorsión de Caras
 Se debe enfocar la mirada en el punto de la cruz central, con la vista periferica se observa que los rostros se ven monstruosos.
 
-Al alinear las caras de los ojos y presentarlos rápidamente, es mucho más fácil compararlos, por lo que las diferencias entre las caras son más extremas. Si alguien tiene una mandíbula grande, se ve casi como un ogro. Si tienen una frente especialmente grande, parece particularmente bulbosa.
+Al alinear las caras a la altura de los ojos y presentarlas rápidamente, es mucho más fácil compararlas, por lo que las diferencias entre las caras son más extremas. Si alguien tiene una mandíbula grande, se ve casi como un ogro. Si tienen una frente especialmente grande, parece particularmente bulbosa.
 
 Al hacer click sobre al imagen, se mostrara la linea de referencia de la altura de los ojos.
-##### Referencias
+##### Referencia
 - http://mbthompson.com/research/
 
 #### Waterfall (Cascada)
@@ -67,6 +67,15 @@ Esto a menudo se explica en términos de "fatiga" de la clase de neuronas que co
 ##### Referencias
 - http://www.michaelbach.de/ot/mot-adapt/index.html
 - https://www.illusionsindex.org/ir/waterfall-illusion
+
+#### Ilusión de Orbison
+El cuadro rojo aparece distorsionado, aunque no lo este, al igual que el rectángulo que contiene la imagen, aunque tampoco lo esté.
+
+Una de las explicaciones a este fenomeno es que nuestros sistemas perceptivos tienen tendencia a "expandir" ángulos agudos, en este caso las líneas de fondo azul que se cruzan con las líneas rojas del cuadro hacen que el sistema visual mejore el contraste de orientación entre las líneas roja y azul, para "expandir" los ángulos agudos en el punto de intersección entre líneas azules y rojas.
+  
+Pase el mouse sobre la imagen para que desaparezcan las lineas azules.
+##### referencia
+- https://www.illusionsindex.org/ir/orbison-illusion
 
 
 ## Entrega

@@ -38,7 +38,7 @@ void draw() {
     redraw();
   }
   
-  delay(70);
+  delay(100);
 }
 
 void pointView(float w, float h){
