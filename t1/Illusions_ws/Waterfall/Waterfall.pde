@@ -1,4 +1,8 @@
-// Waterfall 
+// Waterfall (Cascada)
+/*Fije la mirada en cruz central durante al menos 30 segundos. 
+  luego haga click sobre la imagen, Observe el efecto posterior del 
+  movimiento en la figura en reposo (grilla de puntos).
+*/
 
 int frame = 0;
 boolean fondo = false;
@@ -16,6 +20,7 @@ void draw (){
   float d = w/(3*t);
   
   if (fondo) {
+    dots(width, height);
   } else {
     switch(frame){
       case 0:
@@ -34,7 +39,7 @@ void draw (){
     }
   }
     
-  delay(200);
+  delay(100);
 }
 
 void circles(float w, float h, float d, int t, int col){
@@ -64,6 +69,20 @@ void circles(float w, float h, float d, int t, int col){
   strokeWeight(3);
   line(w/2, h/2+7, w/2, h/2-7);
   line(w/2+7, h/2, w/2-7, h/2);
+}
+
+void dots(float w, float h) {
+  background(255);
+  strokeWeight(w*0.01);
+  stroke(0);
+  float stepW = w/10;
+  float stepH = h/10;
+  
+  for (int i = 0; i < w; i+=stepW) {
+    for (int j = 0; j < h; j+=stepH) {
+      point(i+stepW/2, j+stepH/2);
+    }
+  }
 }
 
 // Interacción

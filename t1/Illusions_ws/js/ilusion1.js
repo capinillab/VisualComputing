@@ -13,7 +13,6 @@ var sketchHorse = function(insHorse) {
 
   insHorse.setup = function() {
     insHorse.createCanvas(400, 440);
-
   };
 
   insHorse.draw = function() {
