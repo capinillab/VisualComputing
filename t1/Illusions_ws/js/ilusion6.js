@@ -1,46 +1,80 @@
-// Rotating Contra (Serpientes giratorias)
-/* Evoca una experiencia perceptual de movimiento ilusorio.
+// Neon
+/* Se aprecia un disco brillante en el area del fondo que lleva el color azul,
+este color es igual al del fondo del resto de la imágen (blanco),
+pero se ve mucho mas brillante.
 
-  Es una ilusione de deriva periférica; cualquier parte de la figura que esté
-  en el centro de nuestro campo visual parece inmóvil (como de hecho lo es),
-  mientras que las partes vistas en nuestra visión periférica parecen moverse.
+Al pasar el mouse sobre la imagen el color azul de los discos desaparece,
+y el fondo se ve con el mismo brillo.
 */
 
-var sketchContra = function(insContra) {
+var sketchNeon = function(insNeon) {
   "use strict";
-	var limit;
+	var pgCirc;
+	var circBlue = true;
 
-	insContra.setup = function(){
-	  insContra.createCanvas(512,300);
-	  insContra.frameRate(60);
-	  limit = insContra.width;
+	insNeon.setup = function(){
+	  insNeon.createCanvas(400, 400);
+	  pgCirc = insNeon.createGraphics(400, 400);
+		insNeon.frameRate(1);
 	};
 
-	insContra.draw = function(){
-	  insContra.background(255);
-	  insContra.smooth(2);
-	  var w = insContra.width;
-	  var h = insContra.height;
+	insNeon.draw = function(){
+	  insNeon.background(255);
+		var w = insNeon.width;
+		var h = insNeon.height;
+	  var d = w*0.32;
+	  var xm = w*0.25;
 
-	  for (var i = 0; i <= w; i++) {
-	    var inter = insContra.map(i, 0, limit, 0, 1);
-	    var c = insContra.lerpColor(30, 225, inter);
-	    insContra.stroke(c);
-	    insContra.line(i, 0, i, h);
+	  var cb = insNeon.color(0,0,0);
+	  var cn = insNeon.color(0,0,255);
+
+	  insNeon.circles(w*0.5, h*0.25, d, cb);
+	  insNeon.circles(w*0.75, h*0.5, d, cb);
+	  insNeon.circles(w*0.5, h*0.75, d, cb);
+	  insNeon.circles(w*0.25, h*0.5, d, cb);
+
+	  pgCirc.loadPixels();
+
+	  if (circBlue){
+	    insNeon.blueNeon(w, h, xm, cb, cn);
 	  }
 
-	  insContra.noStroke();
-	  insContra.fill(128);
-	  insContra.rect(50,120,412,60);
+	  pgCirc.updatePixels();
+
+	  insNeon.image(pgCirc, 0, 0);
+	};
+
+	insNeon.circles = function(xc, yc, d, c) {
+	  pgCirc.smooth(2);
+	  pgCirc.noFill();
+	  pgCirc.stroke(c);
+	  pgCirc.strokeWeight(d*0.039);
+	  var step = d/4;
+	  for (var i = 0; i < 4; i++) {
+	    pgCirc.ellipse(xc, yc, d - i*step, d - i*step);
+	  }
+	};
+
+	insNeon.blueNeon = function(w, h, xm, cb, cn){
+	  for (var i = 0; i < w; i++) {
+	    for (var j = 0; j < h; j++) {
+	      var pos = i + j*w;
+	      var dp = insNeon.dist(w/2, h/2, i, j);
+	      if (pgCirc.pixels[pos] == cb && dp <= xm){
+	        pgCirc.pixels[pos] = cn;
+	      }
+	    }
+	  }
 	};
 
 	// Interacción
-	insContra.mouseMoved = function() {
-	  if (insContra.mouseX>0 && insContra.mouseX<insContra.width){
-	    limit = insContra.mouseX;
+	insNeon.mouseMoved = function() {
+	  if (insNeon.dist(insNeon.mouseX, insNeon.mouseY, insNeon.width/2, insNeon.height/2) < insNeon.width/2){
+	    circBlue = false;
 	  }else{
-	    limit = insContra.width;
+	    circBlue = true;
 	  }
 	};
+
 };
-var myp5 = new p5(sketchContra, 'contra');
+var myp5 = new p5(sketchNeon, 'neon');

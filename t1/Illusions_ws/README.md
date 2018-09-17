@@ -28,6 +28,7 @@ Complete la tabla:
 | Waterfall | Movimiento | [Referencia 1](http://www.michaelbach.de/ot/mot-adapt/index.html)<br>[Referencia 2](https://www.illusionsindex.org/ir/waterfall-illusion) | Click para ver imagen de fondo (en reposo) | No tiene |
 | Orbison | Geometrica | [Referencia](https://www.illusionsindex.org/ir/orbison-illusion) | Pasar el mouse sobre la imagen para quitar las lineas de distorsión | No tiene |
 | Snakes | Movimiento Ilusorio | [Referencia 1](http://www.michaelbach.de/ot/mot-snakesLum/index.html)<br>[Referencia 2](https://www.illusionsindex.org/i/rotating-snakes) | No tiene | No tiene |
+| Neon | Color<br>Contorno Ilusorio | [Referencia 1](http://www.michaelbach.de/ot/col-neon/index.html)<br>[Referencia 2](https://www.illusionsindex.org/i/neon-color-spreading) | Pasar el Mouse para cambiar el color | No tiene|
 | Contraste | Fisiologica<br>Cambio de color | [Referencia](http://www.michaelbach.de/ot/lum-inducedGrating/index.html) | Pasar el mouse sobre la imágen para ocultar la gradación del fondo | [Gradación](https://processing.org/examples/lineargradient.html) |
 
 Las Ilusiones se pueden ver en la página del trabajo: https://capinillab.github.io/cv/t1/Illusions_ws/
@@ -85,6 +86,14 @@ Es una ilusion de deriva periférica; cualquier parte de la figura que esté en 
 - http://www.michaelbach.de/ot/mot-snakesLum/index.html
 - https://www.illusionsindex.org/i/rotating-snakes
 
+#### Neon
+Se aprecia un disco brillante en el area del fondo que lleva el color azul, este color es igual al del fondo del resto de la imágen (blanco), pero se ve mucho mas brillante.
+
+Al pasar el mouse sobre la imagen el color azul de los discos desaparece, y el fondo se ve con el mismo brillo.
+##### Referencia
+- http://www.michaelbach.de/ot/col-neon/index.html
+- https://www.illusionsindex.org/i/neon-color-spreading
+
 #### Cambio de color por contraste
 Cambio de color debido al cambio de contraste, la banda del centro es de un tono gris constante, pero se ve afectada por el contraste con el fondo, pareciendo que tiene un cambio de color que no existe.
 
@@ -92,10 +101,6 @@ Pase el mouse sobre la imagen para quitar la gradación del fondo.
 ##### Referencia
 - http://www.michaelbach.de/ot/lum-inducedGrating/index.html
 
-#### Neon
-##### Referencia
-- http://www.michaelbach.de/ot/col-neon/index.html
-- https://www.illusionsindex.org/i/neon-color-spreading
 
 #### Profundización
 Fue muy interesante hacer la investigación completa, encontre muchas que me sorprendieron pero así mismo eran de dificil implementación.
