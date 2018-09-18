@@ -24,8 +24,8 @@ Complete la tabla:
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
 | Caballo | Ambigua | [Referencia 1](http://ilusionesopticas-fotografias.blogspot.com/p/figuras-ambiguas.html)<br>[Referencia 2](http://www.michaelbach.de/ot/sze-silhouette/index.html) | Clik para ver lineas de referencia de dirección | No tiene |
-| Distorción de Caras | Rostros <br> Movimiento | [Referencia](http://mbthompson.com/research/) | Click para ver linea de referencia altura ojos | No tiene |
-| Waterfall | Movimiento | [Referencia 1](http://www.michaelbach.de/ot/mot-adapt/index.html)<br>[Referencia 2](https://www.illusionsindex.org/ir/waterfall-illusion) | Click para ver imagen de fondo (en reposo) | No tiene |
+| Faces | Rostros <br> Movimiento | [Referencia](http://mbthompson.com/research/) | Click para ver linea de referencia altura ojos | No tiene |
+| Waterfall  | Movimiento | [Referencia 1](http://www.michaelbach.de/ot/mot-adapt/index.html)<br>[Referencia 2](https://www.illusionsindex.org/ir/waterfall-illusion) | Click para ver imagen de fondo (en reposo) | No tiene |
 | Orbison | Geometrica | [Referencia](https://www.illusionsindex.org/ir/orbison-illusion) | Pasar el mouse sobre la imagen para quitar las lineas de distorsión | No tiene |
 | Snakes | Movimiento Ilusorio | [Referencia 1](http://www.michaelbach.de/ot/mot-snakesLum/index.html)<br>[Referencia 2](https://www.illusionsindex.org/i/rotating-snakes) | No tiene | No tiene |
 | Neon | Color<br>Contorno Ilusorio | [Referencia 1](http://www.michaelbach.de/ot/col-neon/index.html)<br>[Referencia 2](https://www.illusionsindex.org/i/neon-color-spreading) | Pasar el Mouse para cambiar el color | No tiene|
