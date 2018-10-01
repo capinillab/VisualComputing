@@ -39,7 +39,11 @@ Describa los resultados obtenidos. En el caso de anti-aliasing describir las té
 
 Se realizo la rasterización del triangulo, sombreando su superficie a partir de los colores de sus vertices, usando coordenadas baricentricas, como resultado se obtuvo:
 
+<<<<<<< HEAD
 ![Rasterización Sombreado de superficie](Images/raster_baricentric.png "asterización Sombreado de superficie")
+=======
+![Rasterización Sombreado de superficie](/Images/raster_baricentric.png "asterización Sombreado de superficie")
+>>>>>>> 525f8b39ebfe4b89a9a0b760d0cd97895031baaf
 
 
 ## Entrega
