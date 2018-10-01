@@ -24,7 +24,7 @@ String renderer = P3D;
 void setup() {
   //use 2^n to change the dimensions
   size(1024, 1024, renderer);
-  // size(800, 800, renderer);
+  // size(512, 512, renderer);
   scene = new Scene(this);
   if (scene.is3D())
     scene.setType(Scene.Type.ORTHOGRAPHIC);
