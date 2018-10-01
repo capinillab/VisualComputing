@@ -18,6 +18,9 @@ boolean triangleHint = true;
 boolean gridHint = true;
 boolean debug = true;
 
+boolean depthMap = false;
+boolean aliasing = false;
+
 // 3. Use FX2D, JAVA2D, P2D or P3D
 String renderer = P3D;
 
@@ -76,15 +79,6 @@ float edgeFunction(Vector p1, Vector p2, Vector p3){
   return ((p3.x() - p1.x()) * (p2.y() - p1.y()) - (p3.y() - p1.y()) * (p2.x() - p1.x()));
 }
 
-// void fillPix(color fc, int i, int j){
-//    pushStyle();
-//    colorMode(RGB, 1);
-//    noStroke();
-//    fill(fc);
-//    rect(i,j,1,1);
-//    popStyle();
-// }
-
 // Implement this function to rasterize the triangle.
 // Coordinates are given in the frame system which has a dimension of 2^n
 void triangleRaster() {
@@ -129,13 +123,22 @@ void triangleRaster() {
 				R = w1 * red(c1)   + w2 * red(c2)   + w3 * red(c3);
 				G = w1 * green(c1) + w2 * green(c2) + w3 * green(c3);
 				B = w1 * blue(c1)  + w2 * blue(c2)  + w3 * blue(c3);
-				fc = color(R, G, B);
 
-				pushStyle();
-				noStroke();
-				fill(fc);
-				rect(j, i, 1, 1);
-				popStyle();
+				if(!depthMap){
+					fc = color(R, G, B);
+					pushStyle();
+					noStroke();
+					fill(fc);
+					rect(j, i, 1, 1);
+					popStyle();
+				}else{
+					fc = color(128, 128, 128);
+					pushStyle();
+					noStroke();
+					fill(fc);
+					rect(j, i, 1, 1);
+					popStyle();
+				}
 			}
 		}
 	}
@@ -194,4 +197,9 @@ void keyPressed() {
       spinningTask.run(20);
   if (key == 'y')
     yDirection = !yDirection;
+
+	if (key == 'm')
+		depthMap = (depthMap) ? false : true;
+	if (key == 'a')
+		aliasing = (aliasing) ? false : true;
 }
