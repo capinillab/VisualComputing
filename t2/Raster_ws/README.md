@@ -37,6 +37,11 @@ Complete la tabla:
 
 Describa los resultados obtenidos. En el caso de anti-aliasing describir las técnicas exploradas, citando las referencias.
 
+Se realizo la rasterización del triangulo, sombreando su superficie a partir de los colores de sus vertices, usando coordenadas baricentricas, como resultado se obtuvo:
+
+![Rasterización Sombreado de superficie](Images/raster_baricentric.png "asterización Sombreado de superficie")
+
+
 ## Entrega
 
 * Modo de entrega: [Fork](https://help.github.com/articles/fork-a-repo/) la plantilla en las cuentas de los integrantes.
