@@ -41,7 +41,22 @@ Se realizo la rasterización del triangulo, sombreando su superficie a partir de
 
 ![Rasterización Sombreado de superficie](Images/raster_baricentric.png "Rasterización Sombreado de superficie")
 
+Para el antialising se realizo la verificación de los 4 extremos del pixel, como se aprecia en: [Referencia](https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/rasterization-practical-implementation), por cada uno que pertenezca al triangulo se da un valor gamma de 255/4, so los 3 pertenecen al triangulo el pixel tendra el color puro de lo contrario tendra una transparencia.
 
+![Rasterización con Antialising](Images/raster_antialising.png "Rasterización con Antialising")
+
+#### Funcionamiento
+
+| Tecla | Efecto |
+|:-----:|--------|
+|  'g'  | Activar/Descativar Grid |
+|  't'  | Mostrar/Ocultar Triangulo |
+|  'd'  | Activar/Descativar Modo debug Vertice V1 |
+| '+' / '-' | Aumentar/Disminuir Grid |
+|  'r'  | Genera nuevo triangulo |
+|  'y'  | Rotación en eje X |
+|  'a'  | Activar/Descativar Anti Aliasing |
+<!-- |  'm'  | Depth Map | -->
 
 ## Entrega
 

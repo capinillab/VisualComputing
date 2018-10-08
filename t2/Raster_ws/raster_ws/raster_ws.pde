@@ -19,15 +19,15 @@ boolean gridHint = true;
 boolean debug = true;
 
 boolean depthMap = false;
-boolean aliasing = false;
+boolean antiAliasing = false;
 
 // 3. Use FX2D, JAVA2D, P2D or P3D
 String renderer = P3D;
 
 void setup() {
   //use 2^n to change the dimensions
-  size(1024, 1024, renderer);
-  // size(512, 512, renderer);
+  // size(1024, 1024, renderer);
+  size(512, 512, renderer);
   scene = new Scene(this);
   if (scene.is3D())
     scene.setType(Scene.Type.ORTHOGRAPHIC);
@@ -124,14 +124,14 @@ void triangleRaster() {
 				G = w1 * green(c1) + w2 * green(c2) + w3 * green(c3);
 				B = w1 * blue(c1)  + w2 * blue(c2)  + w3 * blue(c3);
 
-				if(!depthMap){
-					fc = color(R, G, B);
-					pushStyle();
-					noStroke();
-					fill(fc);
-					rect(j, i, 1, 1);
-					popStyle();
-				}else{
+				fc = color(R, G, B);
+				pushStyle();
+				noStroke();
+				fill(fc);
+				rect(j, i, 1, 1);
+				popStyle();
+
+				if(depthMap){
 					fc = color(128, 128, 128);
 					pushStyle();
 					noStroke();
@@ -139,6 +139,72 @@ void triangleRaster() {
 					rect(j, i, 1, 1);
 					popStyle();
 				}
+			}
+
+			if(antiAliasing){
+				int it = 0;
+				R = G = B = 0;
+				float stp = 255/4;
+				pr.set(j, i);
+
+				float w1a = edgeFunction(p2, p3, pr);
+				float w2a = edgeFunction(p3, p1, pr);
+				float w3a = edgeFunction(p1, p2, pr);
+
+				if (w1a >= 0 && w2a >= 0 && w3a >= 0){
+					it += stp;
+				}
+
+				pr.set(j+1, i+1);
+
+				w1a = edgeFunction(p2, p3, pr);
+				w2a = edgeFunction(p3, p1, pr);
+				w3a = edgeFunction(p1, p2, pr);
+
+				if (w1a >= 0 && w2a >= 0 && w3a >= 0){
+					it += stp;
+				}
+
+				pr.set(j, i+1);
+
+				w1a = edgeFunction(p2, p3, pr);
+				w2a = edgeFunction(p3, p1, pr);
+				w3a = edgeFunction(p1, p2, pr);
+
+				if (w1a >= 0 && w2a >= 0 && w3a >= 0){
+					it += stp;
+				}
+
+				pr.set(j+1, i);
+
+				w1a = edgeFunction(p2, p3, pr);
+				w2a = edgeFunction(p3, p1, pr);
+				w3a = edgeFunction(p1, p2, pr);
+
+				if (w1a >= 0 && w2a >= 0 && w3a >= 0){
+					it += stp;
+				}
+
+				if (it > 0){
+					pr.set(j+0.5, i+0.5);
+
+					w1 = edgeFunction(p2, p3, pr);
+					w2 = edgeFunction(p3, p1, pr);
+					w3 = edgeFunction(p1, p2, pr);
+					w1 /= Area;
+					w2 /= Area;
+					w3 /= Area;
+					R = w1 * red(c1)   + w2 * red(c2)   + w3 * red(c3);
+					G = w1 * green(c1) + w2 * green(c2) + w3 * green(c3);
+					B = w1 * blue(c1)  + w2 * blue(c2)  + w3 * blue(c3);
+				}
+
+				fc = color(R, G, B, 255-it);
+				pushStyle();
+				noStroke();
+				fill(fc);
+				rect(j, i, 1, 1);
+				popStyle();
 			}
 		}
 	}
@@ -201,5 +267,5 @@ void keyPressed() {
 	if (key == 'm')
 		depthMap = (depthMap) ? false : true;
 	if (key == 'a')
-		aliasing = (aliasing) ? false : true;
+		antiAliasing = (antiAliasing) ? false : true;
 }
