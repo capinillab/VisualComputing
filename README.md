@@ -7,6 +7,7 @@ Carpeta de trabajo para la asignatura "Computación Visual"
 |---------|--------------------|
 |   t1    | [Ilusiones Visuales](https://github.com/capinillab/cv/tree/master/t1/Illusions_ws) |
 |   t2    | [Rasterización](https://github.com/capinillab/cv/tree/master/t2/Raster_ws) |
+|   t3    | [Representación](https://github.com/capinillab/cv/tree/master/t3/Representation_ws) |
 
 
 ***
@@ -20,3 +21,8 @@ Implementación de 6 ilusiones de tres tipos distintos (paradójicas, geométric
 [Repositorio](https://github.com/capinillab/cv/tree/master/t2/Raster_ws)
 
 Comprender algunos aspectos fundamentales del paradigma de rasterización.
+
+## Representación
+[Repositorio](https://github.com/capinillab/cv/tree/master/t3/Representation_ws)
+
+Comprender algunos conceptos de como representar elementos en un espacio tridimensional.
