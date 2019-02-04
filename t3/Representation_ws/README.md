@@ -30,6 +30,8 @@ Complete la tabla:
 
 ## Discusión
 
+### Representación
+
 Los Boid se representaron usando las tecnicas _Face-Vertex_ y _Vertex-Vertex_, para simplificar la legibilidad del código en Processing estos se implementaron en clases aparte.
 
 Las mallas _Face-Vertex_ representan un objeto como un conjunto de caras y un conjunto de vértices [Referencia](https://en.wikipedia.org/wiki/Polygon_mesh#Face-vertex_meshes)
@@ -39,7 +41,7 @@ Las mallas _Vertex-Vertex_ representan un objeto como un conjunto de vértices c
 
 El renderizado en modo _Inmediato_ es el uso por defecto de processing, por lo tanto para este no se realizo nada en particular. El modo _Retenido_ requirio usar _PShapes_ para guardar los objetos a renderizar, de este modo el rendimiendo es inferior obteniendo un menor frame rate, debido a que requieren mas calculos por fotograma.
 
-###### Resultados obtenidos de la combinación de los diferentes modos y formas de representación
+##### Resultados obtenidos de la combinación de los diferentes modos y formas de representación
 
 Modo: Retenido.
 Representación de Boid: Face-Vertex.
@@ -58,9 +60,11 @@ Representación de Boid: Vertex-Vertex.
 ![Modo: Inmediato, Representación de Boid: Vertex-Vertex](Images/IVV.png "Modo: Inmediato, Representación de Boid: Vertex-Vertex.")
 
 
-Para la implementación de las diferentes curvas, se utilizaron los métodos encontrados para [Hermite](https://en.wikipedia.org/wiki/Cubic_Hermite_spline) y [Bezier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), para estas se tomas aleatoriamente _boids_ como puntos de control, 4 para el caso de hermite y Bezier Cúbica y 8 para el caso de Bezier de Grado 7, esto se puede cambiar en tiempo de ejecución con la tecla "c" .
+### Curvas
 
-###### Resultados obtenidos de la representación de las diferentes curvas
+Para la implementación de las diferentes curvas, se utilizaron los métodos encontrados para [Hermite](https://en.wikipedia.org/wiki/Cubic_Hermite_spline) y [Bezier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), para estas se tomas aleatoriamente _boids_ como puntos de control, 4 para el caso de Hermite y Bezier Cúbica y 8 para el caso de Bezier de Grado 7, esto se puede cambiar en tiempo de ejecución con la tecla "c" .
+
+##### Resultados obtenidos de la representación de las diferentes curvas
 
 Curva: Cúbica de Hermite.
 ![Curva: Cúbica de Hermite](Images/Hermite.png "Curva: Cúbica de Hermite.")
@@ -72,10 +76,9 @@ Curva: Bezier de Grado 7.
 ![Curva: Bezier de Grado 7](Images/Bezier7.png "Curva: Bezier de Grado 7.")
 
 
+### Funcionamiento
 
-#### Funcionamiento
-
-Debido a que el cambio de _Modo_ y _Tipo de renderizado_ se realiza en la función _setup()_ de _FlockOfBoids_ estos no se pueden cambiar en tiempo de ejecución, para probar los diferentes modos se debe cambiar las variables de _FlockOfBoids_ ubicadas en las lineas 40 y 41.
+Debido a que el cambio de _Modo_ y _Tipo de Renderizado_ se realiza en la función _setup()_ de _FlockOfBoids_ estos no se pueden cambiar en tiempo de ejecución, para probar los diferentes modos se debe cambiar las variables de _FlockOfBoids_ ubicadas en las lineas 40 y 41.
 
 ```
 boolean modo = true; // true Retained, false Inmediate
