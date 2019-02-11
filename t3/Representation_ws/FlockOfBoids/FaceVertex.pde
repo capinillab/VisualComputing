@@ -10,9 +10,9 @@ class FaceVertex{
   }
   
   void renderInmediate(){
-    stroke(0,255,0);
-    //fill(0, 0, 255, 125);
-    noFill();
+    pushStyle();
+    stroke(color(255, 40, 40));
+    fill(color(0, 255, 0, 125));
     
     for(Face face: faceList){
       beginShape(TRIANGLES);
@@ -21,25 +21,30 @@ class FaceVertex{
       vertex(face.v3.x(),face.v3.y(),face.v3.z());
       endShape();
     }
+    
     faceList = null;
     vertexList = null;
   }
   
   PShape renderRetained() {
-    PShape shapeBoid = createShape();
-    shapeBoid.beginShape();
-    shapeBoid.stroke(0,255,0);
-    //shapeBoid.fill(0, 0, 255, 125);
-    shapeBoid.noFill();
+    PShape shapeBoid = createShape(GROUP);
     
     for(Face face: faceList){
-      shapeBoid.vertex(face.v1.x(),face.v1.y(),face.v1.z());
-      shapeBoid.vertex(face.v2.x(),face.v2.y(),face.v2.z());
-      shapeBoid.vertex(face.v3.x(),face.v3.y(),face.v3.z());
+      PShape shape = createShape();
+      shape.beginShape(TRIANGLES);
+      
+      pushStyle();
+      shape.stroke(color(40, 255, 40));
+      shape.fill(color(0, 255, 0, 125));
+      
+      shape.vertex(face.v1.x(),face.v1.y(),face.v1.z());
+      shape.vertex(face.v2.x(),face.v2.y(),face.v2.z());
+      shape.vertex(face.v3.x(),face.v3.y(),face.v3.z());
+      
+      shape.endShape();
+      shapeBoid.addChild(shape);
     }
-     
-    shapeBoid.endShape();
-     
+    
     return shapeBoid;
   }
 }

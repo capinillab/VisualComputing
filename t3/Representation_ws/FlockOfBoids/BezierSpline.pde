@@ -5,7 +5,7 @@ class BezierSpline{
     this.puntos = puntos;
   }
   
-  public void draw3(){
+  public void drawCub(){
     float ppx, ppy, ppz;
     float upx, upy, upz; 
     Vector auxPunto;
@@ -31,7 +31,7 @@ class BezierSpline{
   }
   
 
-  public void draw7(){
+  public void draw(){
     int n = puntos.size();
     Vector point = puntos.get(0);
     Vector aux = null;

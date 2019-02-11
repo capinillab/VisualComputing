@@ -14,7 +14,8 @@ class Boid {
   // TODO
   
   VertexVertex vertex;
-  List vertexList = new ArrayList();
+  //List vertexList = new ArrayList();
+  List vertexNeighbordsList = new ArrayList<ArrayList>();
   FaceVertex faceVertex;
   List vertexArrayList = new ArrayList<Vector>();
   List faceArrayList = new ArrayList<Face>();
@@ -30,7 +31,8 @@ class Boid {
     this.representation = representation;
     iniMesh();
     if (modo && !representation) {
-      vertex = new VertexVertex(vertexList, sc);
+      //vertex = new VertexVertex(vertexList);
+      vertex = new VertexVertex(vertexArrayList, vertexNeighbordsList);
       this.boid = vertex.rednerMeshRetained();
     }
     else if (modo && representation) {
@@ -220,7 +222,8 @@ class Boid {
       }
     }else{
       if(!modo){
-        vertex = new VertexVertex(vertexList, sc);  
+        //vertex = new VertexVertex(vertexList);
+        vertex = new VertexVertex(vertexArrayList, vertexNeighbordsList);
         vertex.renderMeshInmediate();
       }
     }
@@ -230,20 +233,42 @@ class Boid {
   // representation true Face-Vertex, false Vertex-Vertex
   
   void iniMesh(){
+    vertexArrayList.add(new Vector(3 * sc, 0, 0));
+    vertexArrayList.add(new Vector(-3 * sc, 2 * sc, 0));
+    vertexArrayList.add(new Vector(-3 * sc, -2 * sc, 0));
+    vertexArrayList.add(new Vector(-3 * sc, 0, 2 * sc));
+    
     if(representation){
-      vertexArrayList.add(new Vector(3 * sc, 0, 0));
-      vertexArrayList.add(new Vector(-3 * sc, 2 * sc, 0));
-      vertexArrayList.add(new Vector(-3 * sc, -2 * sc, 0));
-      vertexArrayList.add(new Vector(-3 * sc, 0, 2 * sc));
       faceArrayList.add(new Face((Vector)vertexArrayList.get(0),(Vector)vertexArrayList.get(1),(Vector)vertexArrayList.get(2)));
       faceArrayList.add(new Face((Vector)vertexArrayList.get(0),(Vector)vertexArrayList.get(1),(Vector)vertexArrayList.get(3)));
       faceArrayList.add(new Face((Vector)vertexArrayList.get(0),(Vector)vertexArrayList.get(3),(Vector)vertexArrayList.get(2)));
       faceArrayList.add(new Face((Vector)vertexArrayList.get(3),(Vector)vertexArrayList.get(1),(Vector)vertexArrayList.get(2)));
     }else{
-      vertexList.add(new Vector(3 * sc, 0, 0));
-      vertexList.add(new Vector(-3 * sc, 2 * sc, 0));
-      vertexList.add(new Vector(-3 * sc, -2 * sc, 0));
-      vertexList.add(new Vector(-3 * sc, 0, 2 * sc));
+      List vList = new ArrayList();
+      
+      vList.add((Vector)vertexArrayList.get(1));
+      vList.add((Vector)vertexArrayList.get(2));
+      vList.add((Vector)vertexArrayList.get(3));
+      vertexNeighbordsList.add(vList);
+      vList.clear();
+      
+      vList.add((Vector)vertexArrayList.get(0));
+      vList.add((Vector)vertexArrayList.get(2));
+      vList.add((Vector)vertexArrayList.get(3));
+      vertexNeighbordsList.add(vList);
+      vList.clear();
+      
+      vList.add((Vector)vertexArrayList.get(0));
+      vList.add((Vector)vertexArrayList.get(1));
+      vList.add((Vector)vertexArrayList.get(3));
+      vertexNeighbordsList.add(vList);
+      vList.clear();
+      
+      vList.add((Vector)vertexArrayList.get(0));
+      vList.add((Vector)vertexArrayList.get(1));
+      vList.add((Vector)vertexArrayList.get(2));
+      vertexNeighbordsList.add(vList);
+      vList.clear();
     }
   }
   

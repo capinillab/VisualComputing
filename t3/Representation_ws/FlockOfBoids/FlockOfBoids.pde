@@ -30,8 +30,8 @@ Scene scene;
 
 // TODO
 Interpolator interpolator; 
-boolean modo = true; // true Retained, false Inmediate
-boolean representation = true; // true Face-Vertex, false Vertex-Vertex
+boolean modo = false; // true Retained, false Inmediate
+boolean representation = false; // true Face-Vertex, false Vertex-Vertex
 PFont f; // para imprimir texto
 String m, r, c;
 int tc = 0;
@@ -51,7 +51,6 @@ boolean animate = true;
 
 
 void setup() {
-  
   size(1000, 800, P3D);
   scene = new Scene(this);
   scene.setBoundingBox(new Vector(0, 0, 0), new Vector(flockWidth, flockHeight, flockDepth));
@@ -104,12 +103,12 @@ void draw() {
     case 2: // Curva: Bezier Cúbica 
       stroke(255,0,255);
       BezierSpline bezier3 = new BezierSpline(puntos);
-      bezier3.draw7();
+      bezier3.drawCub();
       break;
     case 3: // Curva: Bezier de Grado 7
       stroke(0,255,255);
       BezierSpline bezier7 = new BezierSpline(puntos);
-      bezier7.draw3();
+      bezier7.draw();
       break;
   }
   

@@ -10,8 +10,13 @@
 Empleando el [FlockOfBoids](https://github.com/VisualComputing/frames/tree/master/examples/demos/FlockOfBoids):
 
 1. Represente la malla del [boid](https://github.com/VisualComputing/frames/blob/master/examples/demos/FlockOfBoids/Boid.pde) al menos de dos formas distintas.
-2. Renderice el _flock_ en modo inmediato y retenido, implementando la función ```render()``` del [boid](https://github.com/VisualComputing/frames/blob/master/examples/demos/FlockOfBoids/Boid.pde).
+2. Renderice *la superficie del* _flock_ en modo inmediato y retenido, implementando la función ```render()``` del [boid](https://github.com/VisualComputing/frames/blob/master/examples/demos/FlockOfBoids/Boid.pde).
 3. Implemente las curvas cúbicas de Hermite y Bezier (cúbica y de grado 7), empleando la posición del `frame` del _boid_ como punto de control.
+
+### Sugerencias
+
+* No emplear la representación [vertex-vertex](https://en.wikipedia.org/wiki/Polygon_mesh#Vertex-vertex_meshes), por su dificultad para renderizar la superficie de las primitivas.
+* Probar el empleo de [PShape group](https://processing.org/reference/PShape_addChild_.html) (e.g.,  en el que cada _child_ es un boid) para intentar acelerar el modo retenido. Ver [este](https://github.com/processing/processing-docs/blob/master/content/examples/Demos/Performance/CubicGridImmediate/CubicGridImmediate.pde) ejemplo de modo inmediato y [este](https://github.com/processing/processing-docs/blob/master/content/examples/Demos/Performance/CubicGridRetained/CubicGridRetained.pde) de retenido.
 
 ## Opcionales
 
@@ -39,7 +44,7 @@ Las mallas _Face-Vertex_ representan un objeto como un conjunto de caras y un co
 Las mallas _Vertex-Vertex_ representan un objeto como un conjunto de vértices conectados a otros vértices [Referencia](https://en.wikipedia.org/wiki/Polygon_mesh#Vertex-vertex_meshes)
 
 
-El renderizado en modo _Inmediato_ es el uso por defecto de processing, por lo tanto para este no se realizo nada en particular. El modo _Retenido_ requirio usar _PShapes_ para guardar los objetos a renderizar, de este modo el rendimiendo es inferior obteniendo un menor frame rate, debido a que requieren mas calculos por fotograma.
+El renderizado en modo _Inmediato_ es el uso por defecto de processing, por lo tanto para este no se realizo nada en particular. El modo _Retenido_ se uso _PShape group_ para guardar los objetos a renderizar, de este modo el rendimiendo es inferior obteniendo un menor frame rate, debido a que requieren mas calculos por fotograma.
 
 ##### Resultados obtenidos de la combinación de los diferentes modos y formas de representación
 
@@ -62,7 +67,7 @@ Representación de Boid: Vertex-Vertex.
 
 ### Curvas
 
-Para la implementación de las diferentes curvas, se utilizaron los métodos encontrados para [Hermite](https://en.wikipedia.org/wiki/Cubic_Hermite_spline) y [Bezier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), para estas se tomas aleatoriamente _boids_ como puntos de control, 4 para el caso de Hermite y Bezier Cúbica y 8 para el caso de Bezier de Grado 7, esto se puede cambiar en tiempo de ejecución con la tecla "c" .
+Para la implementación de las diferentes curvas, se utilizaron los métodos encontrados para [Hermite](https://blog.demofox.org/2015/08/08/cubic-hermite-interpolation/) y [Bezier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), para estas se tomas aleatoriamente _boids_ como puntos de control, 4 para el caso de Hermite y Bezier Cúbica y 8 para el caso de Bezier de Grado 7, esto se puede cambiar en tiempo de ejecución con la tecla "c" .
 
 ##### Resultados obtenidos de la representación de las diferentes curvas
 
@@ -97,5 +102,5 @@ Lista de funciones de teclas de _FlockOfBoids_.
 
 ## Entrega
 
-* Subir el código al repositorio de la materia antes del 3/2/19 a las 24h.
-* Presentar el trabajo en la clase del 6/2/19 o 7/2/19.
+* Subir el código al repositorio de la materia antes del ~~3/2/19~~ 10/2/19 a las 24h.
+* Presentar el trabajo en la clase del ~~6/2/19 o 7/2/19~~ 13/2/19 o 14/2/19.
